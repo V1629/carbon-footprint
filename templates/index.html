@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>FOOTPRINT</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/static/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay padtop" style="background-image:url('Screenshot 2024-09-27 203544.pngv');"> 
+ 
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <h1><a href="index.html">FOOTPRINT</a></h1>
+      <!-- ################################################################################################ -->
+    </div>
+    <nav id="mainav" class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <!-- Home Link -->
+        <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+        
+        <!-- Meal Planner Dropdown -->
+        <li>
+          <a class="drop" href="{{ url_for('meal_plans') }}">MEAL PLANNER</a>
+          <ul>
+            <li><a href="{{ url_for('breakfast') }}">BREAKFAST</a></li>
+            <li><a href="{{ url_for('lunch') }}">LUNCH</a></li>
+            <li><a href="{{ url_for('dinner') }}">DINNER</a></li>
+            <li><a href="{{ url_for('brunch') }}">BRUNCH</a></li>
+            <li><a href="{{ url_for('baby_foods') }}">BABY FOODS</a></li>
+            <li><a href="{{ url_for('others') }}">OTHERS</a></li>
+          </ul>
+        </li>
+        
+        <!-- About Link -->
+        <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+        
+        <!-- Carbon Tracker Link -->
+        <li><a href="{{ url_for('calculator') }}">CARBON TRACKER</a></li>
+        
+        <!-- Contact Us Link -->
+        <li><a href="{{ url_for('contact') }}">sign in</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+    
+  </header>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <h3 class="heading">FOOTPRINT</h3>
+      <p>Eat Green, Breathe Clean: Reduce Your Carbon Footprint with a Plant-Based Diet</p>
+      <footer>
+        <ul class="nospace inline pushright">
+          <li><a class="btn" href="#">CALCULATE</a></li>
+          <li><a class="btn inverse" href="#">BLOGS</a></li>
+        </ul>
+      </footer>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+
+<div class="wrapper row1">
+  <section id="ctdetails" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="nospace clear">
+      <li class="one_quarter first">
+        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a call:</strong> (+91)8707638972</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us a mail:</strong> info@footprint.com</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon. - Sat.:</strong> 08.00am - 18.00pm</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-map-marker-alt"></i></a> <span><strong>Come visit us:</strong> Directions to <a href="#">our location</a></span></div>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <section id="services">
+      <div class="sectiontitle">
+        <p class="nospace font-xs">RESEARCH PAPERS</p>
+        <h6 class="heading">Research papers published by some doctors on carbon footprint</h6>
+      </div>
+      <ul class="nospace group grid-3">
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-user-secret"></i></a>
+            <h6 class="heading">Dr. Silvia Pfisterer et al</h6>
+            <p>The Carbon Footprint of Clinical Trials: A Global Survey on the Status Quo and Current Regulatory Guidance".</p>
+            <footer><a href=https://gh.bmj.com/content/8/9/e012754">More Details &raquo;</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-user-secret"></i></a>
+            <h6 class="heading">Dr. Anand Bhopal</h6>
+            <p>Confronting Healthcare’s Carbon Footprint.</p>
+            <footer><a href="https://magazine.hms.harvard.edu/articles/confronting-health-cares-carbon-footprint">More Details &raquo;</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-user-secret"></i></a>
+            <h6 class="heading">Dr. Dominic Konrad</h6>
+            <p>The Carbon Footprint of Healthcare Settings: A Systematic Review</p>
+            <footer><a href="https://gh.bmj.com/content/8/9/e012754">More Details &raquo;</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-user-secret"></i></a>
+            <h6 class="heading">Dr. Heather Baergen</h6>
+            <p>Reducing the Carbon Footprint of Medical Conferences</p>
+            <footer><a href="#">More Details &raquo;</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-user-secret"></i></a>
+            <h6 class="heading">Dr. Heather Baergen</h6>
+            <p>Assessment of Carbon Footprints in Response to Climatic Changes</p>
+            <footer><a href="#">More Details &raquo;</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-user-secret"></i></a>
+            <h6 class="heading">Dr. Liwen Zhang</h6>
+            <p>The Impact of Anesthetic Gases on Healthcare’s Carbon Footprint.</p>
+            <footer><a href="#">More Details &raquo;</a></footer>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="nospace font-xs">Nisi velit nec turpis nullam vitae</p>
+      <h6 class="heading">Understanding Greenhouse Gases</h6>
+    </div>
+    <article id="points" class="group">
+      <div class="two_third first">
+        <h6 class="heading">Greenhouse Gases: A Global Challenge</h6>
+        <p>Greenhouse gases are atmospheric gases that trap heat in Earth's atmosphere, contributing to the planet's warming. These gases are essential for maintaining Earth's habitable temperature, but human activities have significantly increased their concentrations, leading to enhanced global warming and climate change..</p>
+        <p>The most common greenhouse gases include carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), and water vapor. While some occur naturally, human activities like burning fossil fuels, deforestation, and industrial processes have dramatically increased their levels in the atmosphere over the past century.</p>
+        <ul class="nospace group">
+          <li><span>1</span> Carbon Dioxide (CO2)</li>
+          <li><span>2</span> Methane (CH4)</li>
+          <li><span>3</span> Nitrous Oxide (N2O)</li>
+          <li><span>4</span> Water Vapor (H2O)</li>
+          <li><span>5</span> Chlorofluorocarbons (CFCs)</li>
+          <li><span>6</span> Ozone (O3)v</li>
+          <li><span>7</span> Industrial Gases</li>
+          <li><span>8</span>Black Carbon</li>
+        </ul>
+      </div>
+      <div class="one_third last"><a class="imgover" href="#"><img src="https://i.pinimg.com/originals/df/0b/82/df0b82e37dea3eccaf92c8e4a62c157d.png" alt=""></a></div>
+    </article>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="nospace font-xs">Making choices for a healthier planet</p>
+      <h6 class="heading">The Future of Sustainable Eating</h6>
+    </div>
+    <ul id="latest" class="nospace group sd-third">
+      <li class="one_third first">
+        <article>
+          <figure><a class="imgover" href="#"><img src="https://gym.training/wp-content/uploads/2023/11/Plant-based-diet.png" alt=""></a>
+            <figcaption>
+              <ul class="nospace meta clear"> 
+                <li>
+                  <time datetime="2022-04-06T08:15+00:00">06 Apr 2022</time>
+                </li>
+              </ul>
+              <h6 class="heading"><a href="#">Going Green With Plant-Based Meals</a></h6>
+            </figcaption>
+          </figure>
+          <p>The journey to sustainable eating starts on our plates. A plant-based diet isn't just good for our health - it's a powerful way to combat climate change. By reducing meat consumption, we can cut our carbon footprint dramatically. Studies show that plant-based diets use less water, less land, and produce fewer greenhouse gases compared to meat-heavy diets. .</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article>
+          <figure><a class="imgover" href="#"><img src="https://c8.alamy.com/comp/2E2TD3N/eat-local-produce-fresh-from-farm-to-fork-vector-illustration-on-a-white-background-sustainable-local-food-concept-2E2TD3N.jpg" alt=""></a>
+            <figcaption>
+              <ul class="nospace meta clear">
+                <li>
+                  <time datetime="2045-04-05T08:15+00:00">05 May 2023</time>
+                </li>
+              </ul>
+              <h6 class="heading"><a href="#">From Farm to Fork: Local is Best</a></h6>
+            </figcaption>
+          </figure>
+          <p>The distance our food travels matters more than we think. Local sourcing isn't just a trend - it's a crucial step toward sustainability. When we choose locally grown produce, we reduce transportation emissions, support sustainable farming practices, and help maintain local biodiversity.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article>
+          <figure><a class="imgover" href="#"><img src="https://thetribekids.com/cdn/shop/articles/how-sustainable-clothing-choices-impact-the-environment-and-childrens-health-144909_1024x1024.jpg?v=1706116873" alt=""></a>
+            <figcaption>
+              <ul class="nospace meta clear">
+                <li>
+                  <time datetime="2045-04-04T08:15+00:00">29 Jan 2024</time>
+                </li>
+              </ul>
+              <h6 class="heading"><a href="#">Sustainable Choices, Lasting Impact</a></h6>
+            </figcaption>
+          </figure>
+          <p>When we combine plant-based eating with local sourcing, we create a recipe for environmental success. This powerful duo supports regenerative agriculture, reduces water usage, and helps maintain soil health. Local farmers often use more sustainable methods, avoiding harmful intensive farming techniques. By making mindful choices about what we eat and where it comes from, we're not just nourishing ourselves - we're investing in the future of our planet.</p>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="heading">SUPPORT US AT</h6>
+      <p>You can reach out to us on our various social  media platforms to stay updated.</p>
+
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Sustainable Food Alternatives</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Plant-Powered Protein Alternatives</a></li>
+        <li><a href="#">Local Seasonal Swaps</a></li>
+        <li><a href="#">Mindful Kitchen Substitutions</a></li>
+        <li><a href="#">Sustainable Baking Substitutes</a></li>
+        <li><a href="#">Responsible Restaurant Choices</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">carbon tracker</h6>
+      <p class="nospace btmspace-15">Login  to track your carbon footprint</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Newsletter:</legend>
+          <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <input class="btmspace-15" type="text" value="" placeholder="Email">
+          <button class="btn" type="submit" value="submit">login</button>
+        </fieldset>
+      </form>
+    </div>
+    <div class="one_quarter last">
+      <h6 class="heading">Latest Articles</h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <h6 class="nospace font-x1"><a href="https://news.mongabay.com/short-article/people-hugely-underestimate-carbon-footprint-of-the-wealthy-study-shows/">Wealth Inequality and Carbon Footprints</a></h6>
+            <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> sept 2024</time>
+            <p class="nospace"> A recent study reveals that people, especially in wealthier countries, greatly underestimate...</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h6 class="nospace font-x1"><a href="https://www.sciencedaily.com/releases/">Combating Carbon Footprint with Technology</a></h6>
+           
+            <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> August 2024</time>
+            <p class="nospace">A 2024 study published by the Shibaura Institute of Technology discusses a novel reactor system that can convert carbon dioxide into usable fuel</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved - <a href="#">footprint.xyz</a></p>
+    <p class="fl_right">PROJECT by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">TEAM CODE REAPERS</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
