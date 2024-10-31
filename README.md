@@ -17,6 +17,9 @@ Features
 
 Installation
 To get a local copy up and running, follow these steps:
+**Ensure python is already installed  on your machine**
+if not then,You can download it [here](https://www.python.org/downloads/).
+
 1. clone the repo
    git clone https://github.com/V1629/carbon-footprint.git
    cd carbon-footprint
