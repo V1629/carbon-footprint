@@ -5,68 +5,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon Footprint Calculator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Font and general styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a3947; /* Dark teal background */
+            color: #f0f4f8; /* Light text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #085162; /* Darker teal for navbar */
+            color: #f0f4f8;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #f0f4f8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        /* Glowing hover effect */
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 5px;
+            background: rgba(0, 140, 186, 0.5); /* Light blue glow color */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover::before {
+            opacity: 1;
+            box-shadow: 0 0 10px rgba(0, 140, 186, 0.8), 0 0 20px rgba(0, 140, 186, 0.8), 0 0 30px rgba(0, 140, 186, 0.8);
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #083844;
+        }
+
+        .hero-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: #a0e6ff; /* Light teal text for the main heading */
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #d9edf2;
+        }
+
+        .hero-buttons {
+            margin-top: 20px;
+        }
+
+        .calculate-btn, .blogs-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1em;
+            color: #f0f4f8;
+        }
+
+        .calculate-btn {
+            background-color: #008cba; /* Light blue for calculate button */
+        }
+
+        .blogs-btn {
+            background-color: transparent;
+            border: 1px solid #008cba;
+            color: #008cba;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #092e39;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-family: 'Playfair Display', serif;
+            color: #a0e6ff;
+        }
+
+        .calculator-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .calculator-form select, .calculator-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #085162;
+            border-radius: 4px;
+            background-color: #0a3947;
+            color: #f0f4f8;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #083844;
+            color: #a0e6ff;
+            border-radius: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #085162;
+            color: #f0f4f8;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <div class="photo-container">
-            <img src="https://media.istockphoto.com/id/1387271093/vector/reduce-your-carbon-footprint-icon.jpg"
-                alt="Your Photo" width="200" height="200">
-        </div>
-        <ul>
+    <nav class="navbar">
+        <div class="logo">FOOTPRINT</div>
+        <ul class="nav-links">
             <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('meal_plans') }}">Meal Planner</a></li>
             <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('meal_plans') }}">Meal Plans</a></li>
-            <li><a href="{{ url_for('calculator') }}">Carbon Footprint</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('calculator') }}">Carbon Tracker</a></li>
+            <li><a href="{{ url_for('contact') }}">Sign In</a></li>
         </ul>
     </nav>
 
-    <section id="calculator" class="section">
-        <h2>Track Your Carbon Footprint</h2>
-        <p>Use our tool to calculate the carbon impact of your meals.</p>
+    <section class="hero-section">
+        <h1>FOOTPRINT</h1>
+        <p>Eat Green, Breathe Clean: Reduce Your Carbon Footprint With A Plant-Based Diet</p>
+        <div class="hero-buttons">
+            <button class="calculate-btn">Calculate</button>
+            <button class="blogs-btn">Blogs</button>
+        </div>
     </section>
-    <style>
-        .footer {
-            background-color: #28be28;
-            color: white;
-            padding: 10px;
-            margin-top: auto; /* Pushes the footer to the bottom */
-            text-align: center;
-        }</style>
+
     <div class="container">
-        <h1>Carbon Footprint Calculator</h1>
-        <form action="/calculate" method="POST">
+        <h2>Calculate Your Carbon Footprint</h2>
+        <p>Use our tool to calculate the carbon impact of various foods and meals.</p>
+        
+        <form action="/calculate" method="POST" class="calculator-form">
             <label for="product">Select Animal Product:</label>
             <select name="product" id="product">
                 <option value="beef">Beef</option>
                 <option value="chicken">Chicken</option>
                 <option value="milk">Milk</option>
-                <option value="lamb">Cheese</option>
+                <option value="lamb">Lamb</option>
                 <option value="eggs">Eggs</option>
                 <option value="pork">Pork</option>
                 <option value="fish">Fish</option>
             </select>
+
             <label for="quantity">Enter Quantity (in kg):</label>
             <input type="number" step="0.01" name="quantity" id="quantity" required>
-            <button type="submit">Calculate</button>
+            <button type="submit" class="calculate-btn">Calculate</button>
         </form>
-
-        {% if total_footprint %}
+        
+        <!-- Display result if available -->
         <div class="result">
-            <h2>Carbon Footprint Calculation</h2>
+            <h3>Carbon Footprint Calculation</h3>
             <p>The carbon footprint for {{ quantity }} kg of {{ product }} is {{ total_footprint }} kg of CO2e.</p>
         </div>
-        {% endif %}
     </div>
 
-
     <footer class="footer">
-        <p>Email: info@footprint.com</p>
+        <p>Contact us: info@footprint.com | (+91) 8707638972</p>
+        <p>&copy; 2024 Footprint. All rights reserved.</p>
     </footer>
-
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>
